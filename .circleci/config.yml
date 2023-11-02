@@ -1,1 +1,23 @@
 version: 2.1
+
+parameters:
+  build-version:
+    type: string
+    default: "1.0"
+  project-name:
+    type: string
+    default: "API-CRUD"
+
+executors:
+  dotnet-executor:
+    docker:
+      - image: "dockerhubadmin/devops.dotnet-base-build-server:6"
+
+jobs:
+  build_and_unit_test:
+    executor: dotnet-executor
+    steps:
+      - checkout
+      - run:
+          name: Build
+          command: "dotnet build ./API-CRUD.sln -p:Version=0.1 -c Release"
