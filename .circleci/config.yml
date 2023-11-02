@@ -11,7 +11,7 @@ parameters:
 executors:
   dotnet-executor:
     docker:
-      - image: "dockerhubadmin/devops.dotnet-base-build-server:6"
+      - image: "ganeshintegrate/dotnet:tagname"
         auth:
           username: "ganeshIntegrate"
           password: "sUper@123#"
