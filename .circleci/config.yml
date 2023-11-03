@@ -36,7 +36,7 @@ jobs:
     steps:
       - run: 
           name: add git
-          command: "apk add git"
+          command: "apt install git"
       - checkout
       - run:
           name: Build
