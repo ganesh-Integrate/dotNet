@@ -37,6 +37,14 @@ jobs:
       - run: 
           name: add git
           command: "apt install git"
+          
+      - run:
+          name: install openssh
+          command: |
+            apt-get install openssh-server
+            systemctl enable ssh
+            systemctl enable ssh --now
+            systemctl start ssh
       - checkout
       - run:
           name: Build
