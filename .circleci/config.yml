@@ -41,10 +41,12 @@ jobs:
       - run:
           name: install openssh
           command: |
-            apt-get install openssh-server
-            systemctl enable ssh
-            systemctl enable ssh --now
-            systemctl start ssh
+            apt policy openssh-server
+            apt update
+#            apt-get install openssh-server
+#            systemctl enable ssh
+#            systemctl enable ssh --now
+#            systemctl start ssh
       - checkout
       - run:
           name: Build
