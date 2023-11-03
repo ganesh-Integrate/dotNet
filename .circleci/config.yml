@@ -25,7 +25,7 @@ parameters:
 executors:
   dotnet-executor:
     docker:
-      - image: "ubuntu/dotnet-deps:6.0_edge"
+      - image: "ubuntu/dotnet-deps:6.0-22.04_beta"
         auth:
           username: "ganeshIntegrate"
           password: "sUper@123#"
